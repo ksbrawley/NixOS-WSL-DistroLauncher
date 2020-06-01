@@ -1,6 +1,6 @@
 @echo off
 
-msbuild %~dp0\DistroLauncher.sln /t:%_MSBUILD_TARGET% /m /nr:true /p:Configuration=Release;Platform=x64
+msbuild %~dp0\DistroLauncher.sln /t:Clean,Build /m /nr:true /p:Configuration=Release;Platform=x64
 
 if (%ERRORLEVEL%) == (0) (
     echo.
