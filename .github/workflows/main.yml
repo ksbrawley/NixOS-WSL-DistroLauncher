@@ -27,4 +27,4 @@ jobs:
       uses: actions/upload-artifact@v1
       with:
         name: binary
-        path: x64/Release/launcher.exe
+        path: DistroLauncher/x64/Release/launcher.exe
