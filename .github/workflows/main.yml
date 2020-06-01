@@ -2,7 +2,8 @@ name: Generate WSL NixOS Image Launcher
 
 on:
   push:
-    branches: [ master ]
+    branches:
+      - master
 
 jobs:
   build:
@@ -14,11 +15,9 @@ jobs:
       uses: microsoft/setup-msbuild@v1.0.0
 
     - name: Pull latest install.tar.gz
-      env:
-        IMAGE_VERSION: 0.0.2
       run: |
         mkdir ./x64
-        curl https://github.com/Elyhaka/NixOS-WSL/releases/download/$IMAGE_VERSION/install.tar.gz --output ./x64/install.tar.gz
+        curl https://github.com/Elyhaka/NixOS-WSL/releases/download/0.0.2/install.tar.gz --output ./x64/install.tar.gz
 
     - name: Build latest version of launcher
       run: ./build.bat
