@@ -18,7 +18,8 @@ jobs:
       run: |
         mkdir ./x64
         curl https://github.com/Elyhaka/NixOS-WSL/releases/download/0.0.2/install.tar.gz --output ./x64/install.tar.gz
-        tree ./x64
 
     - name: Build latest version of launcher
-      run: ./build.bat
+      run: |
+        ./build.bat
+        tree ./x64
