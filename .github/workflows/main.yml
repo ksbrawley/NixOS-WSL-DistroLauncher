@@ -22,4 +22,9 @@ jobs:
     - name: Build latest version of launcher
       run: |
         ./build.bat
-        tree ./x64
+
+    - name: Get NixOS Launcher binary
+      uses: actions/upload-artifact@v1
+      with:
+        name: binary
+        path: x64/Release/launcher.exe
