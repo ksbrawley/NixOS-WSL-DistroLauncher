@@ -20,6 +20,8 @@ jobs:
         curl https://github.com/Elyhaka/NixOS-WSL/releases/download/0.0.2/install.tar.gz --output ./x64/install.tar.gz
 
     - name: Build latest version of launcher
+      env:
+        ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
       run: |
         ./build.bat
 
